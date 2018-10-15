@@ -16,5 +16,9 @@ module.exports = {
             successRedirect: '/',
             failureRedirect: '/login'
       })(req, res, next);
+    },
+    getLogout(req, res, next) {
+            req.logout();
+            res.redirect('/');
     }
 }

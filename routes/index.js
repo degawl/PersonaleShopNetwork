@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { postRegister, postLogin } = require('../controllers');
+const { postRegister, postLogin, getLogout } = require('../controllers');
 const { errorHandler } = require('../middleware');
 
 router.get('/', (req, res, next) => {
@@ -19,10 +19,7 @@ router.get('/login', (req, res, next) => {
 
 router.post('/login', postLogin);
 
-router.get('/logout', (req, res, next) => {
-  req.logout();
-  res.redirect('/');
-});
+router.get('/logout', getLogout);
 
 router.get('/profile', (req, res, next) => {
   res.send('GET /profile')
