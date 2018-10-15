@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { postRegister } = require('../controllers/index');
+const { postRegister } = require('../controllers');
+const { errorHandler } = require('../middleware');
 
 router.get('/', (req, res, next) => {
   res.render('index', { title: 'eShop Network - Home' });
