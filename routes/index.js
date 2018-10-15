@@ -11,7 +11,7 @@ router.get('/register', (req, res, next) => {
   res.send('GET /register')
 });
 
-router.post('/register', postRegister);
+router.post('/register', errorHandler(postRegister));
 
 router.get('/login', (req, res, next) => {
   res.send('GET /login')
