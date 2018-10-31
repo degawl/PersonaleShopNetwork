@@ -1,1 +1,3 @@
 # PersonaleShopNetwork
+
+School project repo.
